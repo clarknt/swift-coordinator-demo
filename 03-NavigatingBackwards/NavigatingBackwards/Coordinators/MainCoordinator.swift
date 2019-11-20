@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
-    var NavigatingBackwards = [Coordinator]()
+    var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
 
     init(navigationController: UINavigationController) {
@@ -28,7 +28,7 @@ class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     func buySubscription() {
         let child = BuyCoordinator(navigationController: navigationController)
         child.parentCoordinator = self
-        NavigatingBackwards.append(child)
+        childCoordinators.append(child)
         child.start()
     }
 
@@ -39,9 +39,9 @@ class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     }
 
     func childDidFinish(_ child: Coordinator?) {
-        for (index, coordinator) in NavigatingBackwards.enumerated() {
+        for (index, coordinator) in childCoordinators.enumerated() {
             if coordinator === child {
-                NavigatingBackwards.remove(at: index)
+                childCoordinators.remove(at: index)
                 break
             }
         }

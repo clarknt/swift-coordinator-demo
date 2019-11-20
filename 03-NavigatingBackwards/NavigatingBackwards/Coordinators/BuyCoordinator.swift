@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class BuyCoordinator: Coordinator {
-    var NavigatingBackwards = [Coordinator]()
+    var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
     weak var parentCoordinator: MainCoordinator?
 
