@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="TabBars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zzh-eF-7Lg">
+                                <rect key="frame" x="153.5" y="438" width="107" height="30"/>
+                                <state key="normal" title="Create Account"/>
+                                <connections>
+                                    <action selector="createAccountTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n2H-Hj-6WP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGv-yW-FOa">
+                                <rect key="frame" x="192" y="378" width="30" height="30"/>
+                                <state key="normal" title="Buy"/>
+                                <connections>
+                                    <action selector="buyTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C7M-Vz-Gdb"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wMX-Vw-PtS">
+                                <rect key="frame" x="141.5" y="317" width="131" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="XGv-yW-FOa" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9OF-da-t3B"/>
+                            <constraint firstItem="Zzh-eF-7Lg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DOG-wj-GfC"/>
+                            <constraint firstItem="Zzh-eF-7Lg" firstAttribute="top" secondItem="XGv-yW-FOa" secondAttribute="bottom" constant="30" id="RBH-OO-aau"/>
+                            <constraint firstItem="wMX-Vw-PtS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="U9g-J4-3bR"/>
+                            <constraint firstItem="XGv-yW-FOa" firstAttribute="top" secondItem="wMX-Vw-PtS" secondAttribute="bottom" constant="30" id="oK6-ed-PMK"/>
+                            <constraint firstItem="Zzh-eF-7Lg" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="yIY-yO-BIR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="product" destination="wMX-Vw-PtS" id="6bd-3m-PTi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="149" y="126"/>
+        </scene>
+        <!--Buy View Controller-->
+        <scene sceneID="QzN-1D-o18">
+            <objects>
+                <viewController storyboardIdentifier="BuyViewController" id="1JM-89-n85" customClass="BuyViewController" customModule="TabBars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gCr-xB-pz5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BUY PRODUCT #0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vMP-Ab-PtG">
+                                <rect key="frame" x="135.5" y="442.5" width="143" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="vMP-Ab-PtG" firstAttribute="centerX" secondItem="amA-0c-rxI" secondAttribute="centerX" id="1dJ-Vb-Irb"/>
+                            <constraint firstItem="vMP-Ab-PtG" firstAttribute="centerY" secondItem="amA-0c-rxI" secondAttribute="centerY" id="atC-V4-iEp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="amA-0c-rxI"/>
+                    </view>
+                    <connections>
+                        <outlet property="mainLabel" destination="vMP-Ab-PtG" id="REF-aL-DWc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m6P-WL-SDW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="800" y="126"/>
+        </scene>
+        <!--Create Account View Controller-->
+        <scene sceneID="bAb-cV-bsj">
+            <objects>
+                <viewController storyboardIdentifier="CreateAccountViewController" id="Ma7-0z-Bcl" customClass="CreateAccountViewController" customModule="TabBars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j9P-L2-XOT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CREATE ACCOUNT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="osF-jg-zJ5">
+                                <rect key="frame" x="133" y="442.5" width="148" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="osF-jg-zJ5" firstAttribute="centerY" secondItem="GLh-Oo-Kbb" secondAttribute="centerY" id="7VO-P5-gb2"/>
+                            <constraint firstItem="osF-jg-zJ5" firstAttribute="centerX" secondItem="GLh-Oo-Kbb" secondAttribute="centerX" id="BVP-CT-30v"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GLh-Oo-Kbb"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZjM-KI-VaU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1451" y="126"/>
+        </scene>
+    </scenes>
+</document>
