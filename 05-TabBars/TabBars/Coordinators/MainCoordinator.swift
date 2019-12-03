@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class MainCoordinator: Coordinator {
-    var TabBars = [Coordinator]()
+    var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
 
     init(navigationController: UINavigationController) {

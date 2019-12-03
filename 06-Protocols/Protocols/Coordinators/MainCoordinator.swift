@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class MainCoordinator: Coordinator, Buying, AccountCreating {
-    var Protocols = [Coordinator]()
+    var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
 
     init(navigationController: UINavigationController) {
