@@ -1,5 +1,5 @@
 //
-//  BuyViewModel.swift
+//  CreateAccountViewModel.swift
 //  Combine
 //
 //  Created by Glenn Posadas on 4/29/21.
@@ -8,14 +8,15 @@
 
 import Foundation
 
-class BuyViewModel {
-  let coordinator: MainCoordinator
+class CreateAccountViewModel {
+  let coordinator: HomeFlowCoordinator
   
   deinit {
     print("Deinit \(self)")
   }
   
-  init(coordinator: MainCoordinator) {
+  init(coordinator: HomeFlowCoordinator) {
     self.coordinator = coordinator
   }
 }
+

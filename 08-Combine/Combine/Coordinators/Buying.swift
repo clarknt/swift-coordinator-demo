@@ -6,7 +6,7 @@
 //  Copyright © 2019 clarknt. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol Buying: AnyObject {
     func buySubscription()

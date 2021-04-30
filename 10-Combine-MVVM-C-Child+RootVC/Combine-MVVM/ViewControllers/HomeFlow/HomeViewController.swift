@@ -11,9 +11,17 @@ import UIKit
 class HomeViewController: UIViewController, Storyboarded {
   var viewModel: HomeViewModel!
   
+  deinit {
+    print("Deinit \(self)")
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
+  }
+  
+  @IBAction func signoutTapped(_ sender: Any) {
+    viewModel.logout()
   }
   
   @IBAction func buyTapped(_ sender: Any) {

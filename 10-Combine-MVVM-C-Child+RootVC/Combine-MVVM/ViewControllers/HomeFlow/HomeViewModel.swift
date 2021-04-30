@@ -9,13 +9,22 @@
 import Combine
 import Foundation
 
-class HomeViewModel {
-  let coordinator: MainCoordinator
-  
+class HomeViewModel: Coordinated {
+  var coordinator: NSObject & Coordinator
+    
   var buyActionPublisher = PassthroughSubject<Void, Never>()
   var createAccountActionPublisher = PassthroughSubject<Void, Never>()
   
-  init(coordinator: MainCoordinator) {
+  deinit {
+    print("Deinit \(self)")
+  }
+  
+  init(coordinator: HomeFlowCoordinator) {
     self.coordinator = coordinator
+  }
+  
+  func logout() {
+    Keychain.delete(service: .userId)
+    NotificationCenter.default.post(name: .didLogout, object: nil)
   }
 }
